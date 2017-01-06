@@ -3,8 +3,8 @@
 allow for
 multy line comments"""
 
-print "Welcome to Python!"  #print outputs its content to the user- in this case a string. which you can recognise by the quotation marks.
-
+print "Welcome to Python!"  #print outputs its content to the user- in this case a string. which you can recognise by the quotation marks
+#if you use quotation marks inside the print message you can use single quotation marks ' or tripple ''' or tripple double """
 
 ################################----Variables----##########################################
 #these are variables - they can store values
@@ -53,7 +53,7 @@ addition = 72 + 23
 subtraction = 108 - 204
 multiplication = 108 * 0.5
 division = 108 / 9
-exponentiation = 10 **2
+exponentiation = 10 **2 #if you use multiple in 2**3**4 the outside one 4 is used first. use brackets to counteract that (2**3)**4
 modulo = 10%9 # returns remainder from division. in this case 10%9 = 1 
 
 
@@ -334,5 +334,223 @@ print inventory
 print inventory["pocket"]
 
 #__________________________________
+
+############################## FOR loops and Lists and Dictionaries #####################
+
+#printing from lists
+names = ["Adam","Alex","Mariah","Martine","Columbus"]
+for item in names:
+    print item
+
+#printing from dictionaries
+webster = {
+	"Aardvark" : "A star of a popular children's cartoon show.",
+	"Baa" : "The sound a goat makes.",
+	"Carpet": "Goes on the floor.",
+	"Dab": "A small amount."
+}
+
+for key in webster:
+    print webster[key]
+
+
+
+#conditional for loops
+a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+for crap in a:
+    if crap % 2 == 0:
+        print crap
+
+	
+	
+#using lists as input for functions
+x =["fizz","cat","fizz"]
+
+def fizz_count(fizzlist):
+    number_of_fizzes=0
+    print number_of_fizzes
+    for fizzes in fizzlist:
+        if fizzes == "fizz":
+            print "fizz +1"
+            number_of_fizzes = number_of_fizzes +1
+    return number_of_fizzes
+
+number_of_fizzes=fizz_count(x)
+print number_of_fizzes
+
+
+
+#looping through strings
+
+for letter in "Codecademy":
+    print letter
+    
+# another example
+word = "Programming is fun!"
+
+for letter in word:
+    # Only print out the letter i
+    if letter == "i":
+        print letter
+
+
+#Groceries Store
+#Dictionaries and Loops
+
+stock = {
+    'banana': 6,
+    'apple': 0,
+    'orange': 32,
+    'pear': 15
+}
+
+prices = {
+    "banana": 4,
+    "apple": 2,
+    "orange": 1.5,
+    "pear": 3
+}
+
+for shit in stock:
+    print "%s"%(shit)
+    print "price: %s"%( prices[shit])
+    print "stock: %s" %(stock[shit])
+
+#Total inventory - how much is everything i got worth
+
+for cash in prices:
+    total= total + (prices[cash] * stock[cash])
+	print total
+
+
+#shopping list and total bill
+shopping_list = ["banana", "orange", "apple"]
+
+
+def compute_bill(food):
+    total = 0 # start with a total of 0
+    for item in food: # for every item in the shopping list
+        total += prices[item] # for every item in the food list, add the price of the that item from the prices list.
+    return total # show the total
+
+#previous function developed further
+# limit the purchase to the amount of items left in stock.
+
+def compute_bill(food):
+    total = 0
+    for item in food:
+        #print item, stock[item]
+        if stock[item] > 0 : if theres more than
+            stock[item] -= 1
+            print item, prices[item]
+            total += prices[item]
+    return total
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
