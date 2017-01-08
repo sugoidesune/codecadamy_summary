@@ -45,7 +45,14 @@ def spam():                         # the functions name is "spam"
         
 print spam()                        # so when you print the function spam, it will show what has been returned - the variable "eggs" and eggs equals 12 so it will print "12"
 
+#to use a global variable withi a function you have to specify it within the function as follows
 
+main_number = 10
+
+def function():
+	global main_number #thanks to this line the global main_number variable will be used and changed instead of one only available within the function
+	main_number = 13 
+	return
 ####################################----Math----############################################
 
 # these are variables named after the calculations they contain
@@ -225,6 +232,7 @@ bool_five = False or not (True and True)      #False
 ###############################################################################
 #############################---UNIT 5---######################################
 ###################-----List and Dictionaries-------###########################
+#Lists:
 
 zoo_animals = ["pangolin", "cassowary", "sloth", "pikachu" ];
 
